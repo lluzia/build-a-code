@@ -4,12 +4,12 @@ phases:
   install:
     commands:
       - echo "Updating environment"
-      - apt-get update -y
-      - python3 -m venv venv
+      - python3 -m venv venv build-a-code
       - source venv/bin/activate
+
       # install packages
       - echo "[+] Installing dependencies...."
-      - pip install -r requirements.txt -t hello_world/build/
+      - pip install -r requirements.txt
   pre_build:
     commands:
       - echo "nothing to do in the pre_build phase"
