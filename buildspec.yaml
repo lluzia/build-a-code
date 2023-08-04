@@ -18,7 +18,7 @@ phases:
       # run basic build
       - python main.py build
 
-  post-build:
+  post_build:
     commands:
       - echo "Build started on " `date`
 
