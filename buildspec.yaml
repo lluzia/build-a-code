@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Updating environment"
+      - apt-get update -y
+      - python3 -m venv venv
+      - source venv/bin/activate
+      # install packages
+      - echo "[+] Installing dependencies...."
+      - pip install -r requirements.txt -t hello_world/build/
+  pre-build:
+    commands:
+      - echo "nothing to do in the pre_build phase"
+  build:
+    commands:
+      # run basic build
+      - python main.py build
+
+  post-build:
+    commands:
+      - echo "Build started on " `date`
+
+artifacts:
+  files:
+    - "**/*"
+  # base-directory: ${OUTPUT_DIR}
+  name: minhatentativa
