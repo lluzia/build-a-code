@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo "Updating environment"
-      - python3 -m venv venv build-a-code
-      - source venv/bin/activate
+      - python3 -m venv venv
+      - source code-a-build/bin/activate
 
       # install packages
       - echo "[+] Installing dependencies...."
