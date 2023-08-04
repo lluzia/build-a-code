@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Updating environment"
       - python3 -m venv venv
-      - .. /build-a-code/bin/activate
+      - sudo .. /build-a-code/bin/activate
 
       # install packages
       - echo "[+] Installing dependencies...."
